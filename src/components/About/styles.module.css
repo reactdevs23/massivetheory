@@ -1,0 +1,91 @@
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+.image {
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+  height: 100%;
+  display: block;
+}
+.mobileImage {
+  display: none;
+}
+.details {
+  max-width: 330px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 36%;
+  bottom: 100px;
+}
+.name {
+  font-family: var(--font-Family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 125%;
+  color: #ffba49;
+}
+.position {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23.858px;
+  line-height: 120%;
+  color: #cdd0d8;
+  padding: 15px 0;
+  padding-top: 0px;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.socialIcon {
+  width: 42.06;
+  height: 42.23px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1280px) {
+  .details {
+    right: 41%;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .details {
+    right: 47%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .image {
+    object-position: 80%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .details {
+    left: 50px;
+  }
+  .name {
+    font-size: 40px;
+  }
+  .position {
+    font-size: 18px;
+  }
+  /* .dekstopImage {
+    display: none;
+  }
+  .mobileImage {
+    display: block;
+  } */
+}
+@media only screen and (max-width: 575px) {
+  .details {
+    left: 50%;
+    padding-right: 15px;
+    transform: translateX(-50%);
+  }
+}
