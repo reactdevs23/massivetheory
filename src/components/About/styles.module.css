@@ -62,7 +62,7 @@
 }
 @media only screen and (max-width: 991px) {
   .image {
-    object-position: 80%;
+    object-position: 85%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -74,6 +74,9 @@
   }
   .position {
     font-size: 18px;
+  }
+  .image {
+    object-position: 90%;
   }
   /* .dekstopImage {
     display: none;
@@ -87,5 +90,16 @@
     left: 50%;
     padding-right: 15px;
     transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .image {
+    object-position: 88%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .image {
+    object-position: 86%;
   }
 }
