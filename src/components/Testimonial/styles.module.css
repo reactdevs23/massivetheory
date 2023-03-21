@@ -1,0 +1,76 @@
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+.image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  display: block;
+}
+.mySlider {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  max-width: 900px;
+}
+.descriptionContainer {
+  max-width: 580px;
+
+  margin: 0 auto;
+}
+.nameAndPostion {
+  padding-top: 50px;
+}
+.description,
+.position,
+.name {
+  font-family: var(--font-Family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+  color: #cdd0d8;
+  text-align: center;
+}
+
+.name {
+  color: #ffba49;
+}
+
+@media only screen and (max-width: 767px) {
+  .mySlider {
+    padding: 0 30px;
+  }
+  .descriptionContainer {
+    padding: 0 80px;
+  }
+  .nameAndPostion {
+    padding-top: 30px;
+  }
+  .description,
+  .position,
+  .name {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .mySlider {
+    top: 40px;
+  }
+  .mySlider {
+    padding: 0 5px;
+  }
+  .descriptionContainer {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .nameAndPostion {
+    padding-top: 10px;
+  }
+}

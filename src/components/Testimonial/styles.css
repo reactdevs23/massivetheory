@@ -1,0 +1,11 @@
+.swiper-button-prev,
+.swiper-button-next {
+  top: 25%;
+  color: #cdd0d8;
+}
+@media only screen and (max-width: 520px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 28px;
+  }
+}
