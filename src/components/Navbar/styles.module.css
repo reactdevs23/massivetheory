@@ -4,6 +4,9 @@
   z-index: 5;
   width: 100%;
 }
+.activeBg {
+  background-color: #1f262c;
+}
 .navItems {
   display: flex;
   justify-content: center;

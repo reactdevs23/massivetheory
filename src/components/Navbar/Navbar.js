@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { hamburger } from "../../images/image";
 import styles from "./styles.module.css";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
   const [sidebar, setSidebar] = useState(false);
   const navItems = [
     { navItem: "ABOUT", to: "about" },
@@ -12,6 +14,22 @@ const Navbar = () => {
     { navItem: "bio", to: "bio" },
     { navItem: "Collaboration", to: "contact" },
   ];
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 90) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       {sidebar ? (
@@ -24,7 +42,11 @@ const Navbar = () => {
           onClick={() => setSidebar((prev) => !prev)}
         />
       )}
-      <section className={`${styles.navbar} ${sidebar && styles.sidebar}`}>
+      <section
+        className={`${styles.navbar} ${sidebar && styles.sidebar} ${
+          scrolled && styles.activeBg
+        }`}
+      >
         <div className={`${styles.navItems} `}>
           {navItems.map((el, i) => (
             <Link
