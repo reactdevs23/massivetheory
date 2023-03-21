@@ -95,6 +95,7 @@
 @media only screen and (max-width: 991px) {
   .wrapper {
     background-image: url("../../images/background/Music_Mobile.jpg");
+    padding-bottom: 200px;
   }
   .iframeContainer {
     left: 70px;
@@ -123,6 +124,9 @@
   }
 }
 @media only screen and (max-width: 450px) {
+  .wrapper {
+    min-height: 120vh;
+  }
   .iframeContainer {
     width: 98%;
   }

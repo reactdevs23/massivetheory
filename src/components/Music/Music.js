@@ -48,7 +48,7 @@ const Music = () => {
         400: {
           slidesPerView: 2,
         },
-        320: {
+        100: {
           slidesPerView: 2,
         },
       },
