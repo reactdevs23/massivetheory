@@ -1,0 +1,138 @@
+.wrapper {
+  min-height: 130vh;
+  height: 100%;
+  background-color: #1d0b18;
+
+  position: relative;
+  background-image: url("../../images/background/Music_Desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  display: block;
+}
+.sliderWrapper {
+  padding-top: 50px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
+}
+.mySlider {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  max-width: 1250.75px;
+  padding: 0 60px;
+  width: 100%;
+  margin: 0 auto;
+}
+.slides {
+  width: 100%;
+}
+.shopify {
+  position: absolute;
+  max-width: 422px;
+
+  left: 0%;
+  transform: translateY(-150%);
+}
+.iframeContainer {
+  position: absolute;
+  left: 15%;
+  max-width: 600px;
+  max-height: 400px;
+
+  height: 100%;
+  width: 100%;
+
+  bottom: 80px;
+  background: #181818;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.swiperButtonPrevs,
+.swiperButtonNexts {
+  color: #cdd0d8;
+}
+@media only screen and (max-width: 1570px) {
+  .iframeContainer {
+    left: 10%;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .iframeContainer {
+    left: 100px;
+    max-width: 450px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .iframeContainer {
+    max-width: 400px;
+  }
+  .shopify {
+    max-width: 350px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    background-position: 60%;
+  }
+  .shopify {
+    max-width: 320px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    background-image: url("../../images/background/Music_Mobile.jpg");
+  }
+  .iframeContainer {
+    left: 70px;
+  }
+  .shopify {
+    max-width: 280px;
+    left: 50%;
+    transform: translate(-50%, -150%);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    background-position: 80%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .iframeContainer {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .swiperButtonPrevs::after,
+  .swiperButtonNexts::after {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .iframeContainer {
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .mySlider {
+    padding: 0 40px;
+  }
+  .swiperButtonPrevs::after,
+  .swiperButtonNexts::after {
+    font-size: 20px;
+  }
+}

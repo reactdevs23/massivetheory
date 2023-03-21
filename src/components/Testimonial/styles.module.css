@@ -41,6 +41,11 @@
 .name {
   color: #ffba49;
 }
+.swiperButtonPrev,
+.swiperButtonNext {
+  color: #cdd0d8;
+  top: 25%;
+}
 
 @media only screen and (max-width: 767px) {
   .mySlider {
@@ -67,6 +72,10 @@
   }
   .descriptionContainer {
     padding: 0 50px;
+  }
+  .swiperButtonPrev::after,
+  .swiperButtonNext::after {
+    font-size: 28px;
   }
 }
 @media only screen and (max-width: 400px) {

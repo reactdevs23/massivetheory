@@ -1,10 +1,12 @@
 import React from "react";
-import { BioBg } from "../../images/image";
+import { BioBg, BioSide } from "../../images/image";
+import ScrollToNextSection from "../ScrollToNextSection/ScrollToNextSection";
+import SideImage from "../SideImage/SideImage";
 import styles from "./styles.module.css";
 
 const Bio = () => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="bio">
       <img src={BioBg} alt="#" className={styles.image} />
       <div className={styles.descriptionContainer}>
         <p className={styles.description}>
@@ -45,6 +47,8 @@ const Bio = () => {
           New York City to the scoring stages of Los Angeles.
         </p>
       </div>
+      <ScrollToNextSection nextSection="contact" />
+      <SideImage image={BioSide} />
     </section>
   );
 };

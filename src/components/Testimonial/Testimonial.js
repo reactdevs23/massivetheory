@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { TestimonialBg } from "../../images/image";
+import { TestimonialBg, TestimonialSide } from "../../images/image";
 import Swiper, { Autoplay, Navigation } from "swiper";
 import styles from "./styles.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
-import "./styles.css";
+import ScrollToNextSection from "../ScrollToNextSection/ScrollToNextSection";
+import SideImage from "../SideImage/SideImage";
 
 const Testimonial = () => {
   const slides = [
@@ -29,7 +30,7 @@ const Testimonial = () => {
   ];
 
   useEffect(() => {
-    let swiper = new Swiper(".swiper", {
+    let swiper = new Swiper(".descriptionSwiper", {
       modules: [Autoplay, Navigation],
 
       direction: "horizontal",
@@ -43,17 +44,6 @@ const Testimonial = () => {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      //   breakpoints: {
-      //     767: {
-      //       slidesPerView: 4,
-      //     },
-      //     400: {
-      //       slidesPerView: 3,
-      //     },
-      //     320: {
-      //       slidesPerView: 2.5,
-      //     },
-      //   },
     });
 
     return () => {
@@ -61,11 +51,11 @@ const Testimonial = () => {
     };
   }, []);
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="testimonial">
       <img src={TestimonialBg} alt="#" className={styles.image} />
       <div className={styles.mySlider}>
-        <div className={`swiper`}>
-          <div className={[styles.asSeenOn, "swiper-wrapper"].join(" ")}>
+        <div className={`swiper descriptionSwiper`}>
+          <div className="swiper-wrapper">
             {slides.map((el, i) => {
               return (
                 <div key={i} className="swiper-slide">
@@ -81,10 +71,16 @@ const Testimonial = () => {
               );
             })}
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div
+            className={`${styles.swiperButtonPrev} swiper-button-prev`}
+          ></div>
+          <div
+            className={`${styles.swiperButtonNext} swiper-button-next`}
+          ></div>
         </div>
       </div>
+      <SideImage image={TestimonialSide} />
+      <ScrollToNextSection nextSection="music" />
     </section>
   );
 };

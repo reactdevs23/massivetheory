@@ -1,0 +1,13 @@
+.sideImage {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  z-index: 1;
+  width: 18.8px;
+}
+@media only screen and (max-width: 520px) {
+  .sideImage {
+    left: 5px;
+    width: 12px;
+  }
+}

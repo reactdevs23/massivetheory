@@ -1,0 +1,174 @@
+.wrapper {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #1d0b18;
+
+  position: relative;
+  background-image: url("../../images/background/Contact_Desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contactDetails {
+  max-width: 600px;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-bottom: 50px;
+}
+.title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: #cdd0d8;
+  padding-bottom: 12px;
+}
+.textContainer {
+  padding: 25px 0;
+}
+.text {
+  font-family: var(--font-Family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+
+  color: #ffffff;
+}
+.hightLight {
+  color: #ffba49;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 25px 0;
+}
+.socialIcon {
+  width: 42.06;
+  height: 42.23px;
+  cursor: pointer;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 15px;
+  padding-top: 13px;
+}
+.inputWrapper {
+  display: flex;
+
+  align-items: center;
+  gap: 25px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.emailContainer,
+.phoneContainer {
+  max-width: 377.77px;
+}
+.label {
+  font-family: var(--font-Family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #ffba49;
+  padding-bottom: 3px;
+}
+.input {
+  background-color: transparent;
+  border: 1px solid rgb(205, 208, 216, 49);
+  outline: none;
+  padding: 5px 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  color: #cdd0d8;
+}
+.textArea {
+  height: 191px;
+  width: 100%;
+}
+.button {
+  font-family: var(--font-Family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  color: #000000;
+  background: #ffba49;
+  padding: 6px 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.info {
+  padding-top: 70px;
+  max-width: 360px;
+  width: 100%;
+}
+.tagline {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 120%;
+  color: #cdd0d8;
+  padding-bottom: 12px;
+}
+@media only screen and (max-width: 991px) {
+  .contactDetails {
+    padding-left: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contactDetails {
+    padding: 0 45px;
+    padding-top: 100px;
+
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .inputWrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .phoneContainer,
+  .emailContainer {
+    max-width: auto;
+    width: 100%;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .tagline {
+    font-size: 28px;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .label,
+  .input {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .contactDetails {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}

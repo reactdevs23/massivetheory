@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #1d242a;
+  padding: 40px 20px;
+  padding-top: 60px;
+}
+.owner {
+  width: 290px;
+  height: 290px;
+}
+.text {
+  font-family: var(--font-Family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32.403px;
+  line-height: 125%;
+  text-align: center;
+  /* identical to box height */
+
+  color: #a4a2a2;
+}
+@media only screen and (max-width: 991px) {
+  .text {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .text {
+    font-size: 18px;
+  }
+}

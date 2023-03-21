@@ -1,24 +1,20 @@
 import React from "react";
+import { animateScroll } from "react-scroll";
 
 import {
   AboutBg,
-  facebook,
-  imdb,
-  instagram,
-  soundCloud,
+  AboutSide,
+  BackToTop,
   MobileBgAbout,
 } from "../../images/image";
+import ScrollToNextSection from "../ScrollToNextSection/ScrollToNextSection";
+import SideImage from "../SideImage/SideImage";
+import SocialContainer from "../SocialContainer/SocialContainer";
 import styles from "./styles.module.css";
 
 const About = () => {
-  const socials = [
-    { icon: instagram, to: "#" },
-    { icon: facebook, to: "#" },
-    { icon: imdb, to: "#" },
-    { icon: soundCloud, to: "#" },
-  ];
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="about">
       <img
         src={AboutBg}
         alt="#"
@@ -32,20 +28,16 @@ const About = () => {
       <div className={styles.details}>
         <h2 className={styles.name}>Jonathan Bartz</h2>
         <p className={styles.position}>Composer</p>
-        <div className={styles.socialContainer}>
-          {socials.map((el, i) => (
-            <img
-              key={i}
-              src={el.icon}
-              alt="#"
-              to={el.to}
-              target="_blank"
-              rel="noreferrer"
-              className={styles.socialIcon}
-            />
-          ))}
-        </div>
+        <SocialContainer />
       </div>
+      <SideImage image={AboutSide} />
+      <ScrollToNextSection nextSection="testimonial" />
+      <img
+        src={BackToTop}
+        onClick={() => animateScroll.scrollToTop()}
+        alt="#"
+        className={styles.backtopTop}
+      />
     </section>
   );
 };
