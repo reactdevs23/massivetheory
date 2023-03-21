@@ -27,8 +27,8 @@
 .close,
 .hamburger {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 30px;
+  top: 30px;
   width: 30px;
   height: 32px;
   z-index: 6;
@@ -83,7 +83,7 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    padding-top: 70px;
+    padding-top: 90px;
   }
   .sidebar {
     transform: translate(0);

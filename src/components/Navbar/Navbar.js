@@ -34,7 +34,7 @@ const Navbar = () => {
               activeClass={styles.active}
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={0}
               duration={500}
               onClick={() => setSidebar(false)}
             >
