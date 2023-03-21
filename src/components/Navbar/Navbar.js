@@ -13,7 +13,7 @@ const Navbar = () => {
     { navItem: "Collaboration", to: "contact" },
   ];
   return (
-    <section className={styles.navbar}>
+    <>
       {sidebar ? (
         <p class={styles.close} onClick={() => setSidebar((prev) => !prev)}></p>
       ) : (
@@ -24,25 +24,26 @@ const Navbar = () => {
           onClick={() => setSidebar((prev) => !prev)}
         />
       )}
-
-      <div className={`${styles.navItems} ${sidebar && styles.sidebar}`}>
-        {navItems.map((el, i) => (
-          <Link
-            to={el.to}
-            className={styles.navItem}
-            key={i}
-            activeClass={styles.active}
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            onClick={() => setSidebar(false)}
-          >
-            {el.navItem}{" "}
-          </Link>
-        ))}
-      </div>
-    </section>
+      <section className={`${styles.navbar} ${sidebar && styles.sidebar}`}>
+        <div className={`${styles.navItems} `}>
+          {navItems.map((el, i) => (
+            <Link
+              to={el.to}
+              className={styles.navItem}
+              key={i}
+              activeClass={styles.active}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => setSidebar(false)}
+            >
+              {el.navItem}{" "}
+            </Link>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 
